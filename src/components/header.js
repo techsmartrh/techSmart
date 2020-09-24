@@ -1,42 +1,136 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import Nav from './Nav'
+import Logo from './ImageComponents/Logo'
+import React, { useEffect } from "react"
+import styled from "styled-components"
+import { Link } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faFacebookSquare,
+  faTwitterSquare
+} from '@fortawesome/free-brands-svg-icons'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const HeaderElement = styled.header`
+  width: 100%;
+  margin: 0;
+  padding: 0;
+`
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const HeaderTopBar = styled.div`
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  background: var(--grey4);
 
-Header.defaultProps = {
-  siteTitle: ``,
+  & > * {
+    height: 100%;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50px 0, 100% 0%, 200px 100%, 0% 100%);
+  }
+
+  & > div:nth-child(1) {
+    z-index: 10;
+    background: var(--grey3);
+  }
+
+  & > div:nth-child(2) {
+    margin: 0 -50px;
+    z-index: 20;
+    background: var(--grey2);
+    color: #00A1E1;
+  }
+
+  & > div:nth-child(3) {
+    clip-path: polygon(50px 0, 100% 0%, 100% 100%, 0% 100%);
+    background: var(--grey1);
+  }
+
+  @media(max-width: 710px){
+        flex-direction: column;
+        height: auto;
+        & > * {
+          height: auto;
+          width: 100%;
+          clip-path: none;
+        }
+  }
+`
+
+const HeaderBody = styled.div`
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  @media(max-width: 710px){
+        flex-direction: column;
+        align-items: center;
+    }
+`
+
+const HeaderLogo = styled.div`
+  width: 400px;
+  padding: 20px;
+`
+
+const HeaderButtons = styled.div`
+  margin: 20px;
+  display: flex;
+  align-items: center;
+
+  & > a > button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 40px;
+    border: none;
+    background: var(--accent-color);
+    color: white;
+  }
+`
+
+const Header = () => {
+  let currentPath;
+
+  return (
+    <HeaderElement>
+      <HeaderTopBar>
+        <div>
+          <a href="https://www.facebook.com/gotechsmart">
+            <FontAwesomeIcon 
+              color="lightgrey" 
+              style={{'margin':'10px'}} 
+              transform='down-1' 
+              icon={faFacebookSquare} 
+              size="2x" />
+            </a>
+          <a href="https://twitter.com/TechSmart6">
+            <FontAwesomeIcon 
+              color="lightgrey" 
+              style={{'margin':'10px'}} 
+              transform='down-1' 
+              icon={faTwitterSquare} 
+              size="2x" />
+            </a>
+        </div>
+        <div>(912) 756 - 8324</div>
+        <div>Mon-Fri 8am -5p</div>
+      </HeaderTopBar>
+      <HeaderBody>
+        <HeaderLogo>
+          <Link to='/'><Logo /></Link>
+        </HeaderLogo>
+          <HeaderButtons>
+            <a href="http://www.gotechsmart.com/repairstatus/"><button>Check Status</button></a>
+            <a href="http://www.gotechsmart.com/servicerequests/"><button>Check in Your Machine</button></a>
+          </HeaderButtons>
+      </HeaderBody>
+      <Nav current={currentPath} />
+    </HeaderElement>
+  )
 }
 
 export default Header

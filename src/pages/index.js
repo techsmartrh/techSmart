@@ -1,21 +1,35 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from 'styled-components'
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+import FamilyImage from "../components/ImageComponents/FamilyImage"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const Tagline = styled.p`
+  text-align: center;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 1.5em;
+  color: var(--grey0);
+  padding: 0 50px;
+`
+
+const ServiceTag = styled.p`
+  text-align: center;
+  padding: 0 50px;
+`
+
+const IndexPage = ({location}) => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Tagline>
+      Tech Smart provides on-site, in-store, and remote service for desktop and mobile device repair, data backup/recovery, network troubleshooting, and more. 
+    </Tagline>
+    <FamilyImage />
+    <ServiceTag>
+      Locally serving the Savannah, Midway, Hinesville, and Pooler areas    
+    </ServiceTag>
+
   </Layout>
 )
 
