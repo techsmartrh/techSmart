@@ -8,6 +8,7 @@ import {
   faFacebookSquare,
   faTwitterSquare
 } from '@fortawesome/free-brands-svg-icons'
+import { globalHistory as history } from '@reach/router'
 
 const HeaderElement = styled.header`
   width: 100%;
@@ -93,7 +94,7 @@ const HeaderButtons = styled.div`
 `
 
 const Header = () => {
-  const currentPath = window.location.pathname.replace('/','')
+  const currentPath = history.location.pathname.replace('/','')
 
   return (
     <HeaderElement>
