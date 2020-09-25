@@ -54,7 +54,7 @@ const Footer = () => {
           2465 Highway 17<br />
           Richmond Hill, GA
         </div>
-        <div>info@gotechsmart.com</div>
+        <a href="mailto:info@gotechsmart.com" style={{textDecoration: 'none'}}><div style={{fontStyle: 'italic', 'color': 'var(--accent-color)'}}>info@gotechsmart.com</div></a>
         <div>
           <FontAwesomeIcon style={{'marginRight':'5px'}} icon={faCcVisa} size="1x" />
           <FontAwesomeIcon style={{'marginRight':'5px'}} icon={faCcMastercard} size="1x" />
