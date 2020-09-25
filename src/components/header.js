@@ -54,10 +54,16 @@ const HeaderTopBar = styled.div`
   @media(max-width: 710px){
         flex-direction: column;
         height: auto;
-        & > * {
+        align-items: center;
+        clip-path: none;
+        & > div {
           height: auto;
           width: 100%;
           clip-path: none;
+        }
+        & > div:nth-child(3) {
+          clip-path: none;
+          background: var(--grey1);
         }
   }
 `
@@ -102,7 +108,7 @@ const Header = () => {
         <div>
           <a href="https://www.facebook.com/gotechsmart">
             <FontAwesomeIcon 
-              color="lightgrey" 
+              color="#C4C4C4" 
               style={{'margin':'10px'}} 
               transform='down-1' 
               icon={faFacebookSquare} 
@@ -110,7 +116,7 @@ const Header = () => {
             </a>
           <a href="https://twitter.com/TechSmart6">
             <FontAwesomeIcon 
-              color="lightgrey" 
+              color="#C4C4C4" 
               style={{'margin':'10px'}} 
               transform='down-1' 
               icon={faTwitterSquare} 

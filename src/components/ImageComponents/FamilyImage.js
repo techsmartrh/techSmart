@@ -32,7 +32,7 @@ const FamilyImage = () => {
 
   return <Img 
             style={{'width':'100%', 'height':'350px'}} 
-            imgStyle={{'objectPosition':'0 20%'}}
+            imgStyle={{'objectPosition':'50% 20%'}}
             fluid={data.placeholderImage.childImageSharp.fluid}
           />
 }
