@@ -1,6 +1,6 @@
 import Nav from './Nav'
 import Logo from './ImageComponents/Logo'
-import React, { useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
