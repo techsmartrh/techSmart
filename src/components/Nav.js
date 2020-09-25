@@ -31,7 +31,7 @@ const HeaderLinkContainer = styled.div`
     width: ${100 / links.length}%;
     display: flex;
     align-items: center;
-    color: white;
+    color: ${props => props.isActive ? '#00A1E1': 'white'};
     padding: 0;
     margin: 0;
     border: none;
