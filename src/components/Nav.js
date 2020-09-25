@@ -71,17 +71,20 @@ const HeaderLinkRight = styled.div`
 
 export default ({current}) => {
 
-    let currentPath = null;
+    // let currentPath = null;
 
-    useEffect(()=>{
-        let path = Array.from(document.querySelectorAll('a.headerLink')).filter(node => node.attributes.getNamedItem('aria-current'))[0].href
-        currentPath = path.slice(path.indexOf('/', 7) + 1)
-    },[])
+    // useEffect(()=>{
+    //     let path = Array.from(document.querySelectorAll('a.headerLink')).filter(node => node.attributes.getNamedItem('aria-current'))[0].href
+    //     currentPath = path.slice(path.indexOf('/', 7) + 1)
+    // },[])
 
     return (
         <NavElement>
         {links.map((link, idx) => (
-            <HeaderLinkContainer isActive={currentPath === link.pathName ? true : false}>
+            <HeaderLinkContainer 
+            // isActive={currentPath === link.pathName ? true : false}
+            isActive={false}
+            >
                 <HeaderLinkLeft 
                     isFirst={idx !== 0 ? true : false}>
                 </HeaderLinkLeft>

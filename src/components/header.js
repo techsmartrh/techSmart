@@ -128,7 +128,7 @@ const Header = () => {
             <a href="http://www.gotechsmart.com/servicerequests/"><button>Check in Your Machine</button></a>
           </HeaderButtons>
       </HeaderBody>
-      <Nav current={currentPath} />
+      <Nav/>
     </HeaderElement>
   )
 }
