@@ -29,7 +29,7 @@ const CarboniteButton = styled.button`
 `
 
 const RepairsPage = () => (
-  <Layout>
+  <>
     <SEO title="Backup & Recovery" />
     <h1>Data Backup & Recovery</h1>
     <Container>
@@ -44,7 +44,7 @@ const RepairsPage = () => (
         <a href="http://partners.carbonite.com/GoTechSmart"><CarboniteButton>Click Here</CarboniteButton></a>
       </Card>
     </Container>
-  </Layout>
+  </>
 )
 
 export default RepairsPage

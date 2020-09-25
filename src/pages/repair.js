@@ -18,7 +18,7 @@ const Container = styled.div`
 `
 
 const RepairsPage = () => (
-  <Layout>
+  <>
     <SEO title="Diagnostics & Repair" />
     <h1>Device Repair</h1>
     <Container>
@@ -32,7 +32,7 @@ const RepairsPage = () => (
         <RepairImage />
       </Card>
     </Container>
-  </Layout>
+  </>
 )
 
 export default RepairsPage

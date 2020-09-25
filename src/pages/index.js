@@ -20,7 +20,7 @@ const ServiceTag = styled.p`
 `
 
 const IndexPage = ({location}) => (
-  <Layout>
+  <>
     <SEO title="Home" />
     <Tagline>
       Tech Smart provides on-site, in-store, and remote service for desktop and mobile device repair, data backup/recovery, network troubleshooting, and more. 
@@ -29,8 +29,7 @@ const IndexPage = ({location}) => (
     <ServiceTag>
       Locally serving the Savannah, Midway, Hinesville, and Pooler areas    
     </ServiceTag>
-
-  </Layout>
+  </>
 )
 
 export default IndexPage
