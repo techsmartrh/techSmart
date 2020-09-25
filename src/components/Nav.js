@@ -70,11 +70,11 @@ const HeaderLinkRight = styled.div`
 
 
 export default ({current}) => {
-    
+    console.log(current)
     return (
         <NavElement>
         {links.map((link, idx) => (
-            <HeaderLinkContainer isActive={current === link.pathName ? true : false}>
+            <HeaderLinkContainer key={idx} isActive={current === link.pathName ? true : false}>
                 <HeaderLinkLeft 
                     isFirst={idx !== 0 ? true : false}>
                 </HeaderLinkLeft>

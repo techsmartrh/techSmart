@@ -100,7 +100,7 @@ const HeaderButtons = styled.div`
 `
 
 const Header = () => {
-  const currentPath = history.location.pathname.replace('/','')
+  const currentPath = history.location.pathname.replaceAll('/','')
 
   return (
     <HeaderElement>
