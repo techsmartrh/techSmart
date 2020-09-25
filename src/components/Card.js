@@ -10,6 +10,13 @@ const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    transition: 0.1s ease-out;
+
+    &:hover{
+        transform: translateY(-8px);
+        transition: 0.3s ease-out;
+    }
 `
 
 const Card = ({children, title, description}) => {

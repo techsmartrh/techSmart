@@ -96,11 +96,12 @@ const HeaderButtons = styled.div`
     border: none;
     background: var(--accent-color);
     color: white;
+    box-shadow: 5px 5px 10px var(--grey0);
   }
 `
 
 const Header = () => {
-  const currentPath = history.location.pathname.replaceAll('/','')
+  const currentPath = history.location.pathname.replace('/','')
 
   return (
     <HeaderElement>

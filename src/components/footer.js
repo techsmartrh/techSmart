@@ -46,8 +46,7 @@ const FooterContainer = styled.div`
   }
 `
 
-const Footer = ({location, data}) => {
-  console.log(data)
+const Footer = () => {
   return (
     <FooterElement>
       <FooterContainer position="left">

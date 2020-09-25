@@ -76,13 +76,13 @@ export default ({current}) => {
     return (
         <NavElement>
         {links.map((link, idx) => (
-            <HeaderLinkContainer key={idx} isActive={current === link.pathName ? true : false}>
+            <HeaderLinkContainer key={idx} isActive={current === link.pathName}>
                 <HeaderLinkLeft 
-                    isFirst={idx !== 0 ? true : false}>
+                    isFirst={idx !== 0}>
                 </HeaderLinkLeft>
                 <Link style={{'width':'100%'}}className='headerLink' to={`/${link.pathName}`}>{link.label}</Link>
                 <HeaderLinkRight 
-                    isNotLast={idx !== links.length - 1 ? true : false}>
+                    isNotLast={idx !== links.length - 1}>
                 </HeaderLinkRight>
             </HeaderLinkContainer>
         ))}
