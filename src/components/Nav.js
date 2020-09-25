@@ -41,7 +41,6 @@ const HeaderLinkContainer = styled.div`
         padding: 0;
         margin: 0;
         background: ${props => props.isActive ? '#C4C4C4': 'inherit'};
-        color: ${props => props.isActive ? '#00A1E1': 'inherit'};
     }
 
     @media(max-width: 710px){
@@ -80,7 +79,7 @@ export default ({current}) => {
                 <HeaderLinkLeft 
                     isFirst={idx !== 0}>
                 </HeaderLinkLeft>
-                <Link style={{'width':'100%'}}className='headerLink' to={`/${link.pathName}`}>{link.label}</Link>
+                <Link style={{'width':'100%'}} className='headerLink' to={`/${link.pathName}`}>{link.label}</Link>
                 <HeaderLinkRight 
                     isNotLast={idx !== links.length - 1}>
                 </HeaderLinkRight>

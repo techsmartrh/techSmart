@@ -65,6 +65,12 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: color .25s ease-in-out;
+  }
+
+  .headerLink:hover{
+    color: var(--accent-color);
+    transition: color .25s ease-in-out;
   }
 
   .activeLink *{
