@@ -53,6 +53,7 @@ const HeaderLinkContainer = styled.div`
 
 const HeaderLinkLeft = styled.div`
     width: 30px;
+    height: 100%;
     clip-path: ${props => props.isFirst ? 'polygon(100% 0, 100% 100%, 0 100%)' : 'none'};
     @media(max-width: 710px){
         display: none;
@@ -61,6 +62,7 @@ const HeaderLinkLeft = styled.div`
 
 const HeaderLinkRight = styled.div`
     width: 30px;
+    height: 100%;
     clip-path: ${props => props.isNotLast ? 'polygon(100% 0, 0 0, 0 100%)' : 'none'};
     @media(max-width: 710px){
         display: none;
