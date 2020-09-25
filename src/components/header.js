@@ -93,7 +93,7 @@ const HeaderButtons = styled.div`
 `
 
 const Header = () => {
-  let currentPath;
+  const currentPath = window.location.pathname.replace('/','')
 
   return (
     <HeaderElement>
@@ -128,7 +128,7 @@ const Header = () => {
             <a href="http://www.gotechsmart.com/servicerequests/"><button>Check in Your Machine</button></a>
           </HeaderButtons>
       </HeaderBody>
-      <Nav/>
+      <Nav current={currentPath} />
     </HeaderElement>
   )
 }
